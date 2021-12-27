@@ -1,0 +1,20 @@
+.ExchangeRatesContainer {
+  width: 70%;
+  min-height: 60vh;
+  border: 1px solid black;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 1vmin);
+  /* overflow: scroll; */
+}
+
+.ExchangeRatesItem {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
