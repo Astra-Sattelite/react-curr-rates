@@ -27,16 +27,7 @@
 }
 
 .ExchangeRatesItemValue {
-  width: 30%;
-  height: 100%;
-  border-bottom: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
-.ExchangeRatesItemMock {
-  width: 40%;
+  width: 60%;
   height: 100%;
   border-bottom: 1px solid black;
   display: flex;
