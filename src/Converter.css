@@ -1,0 +1,15 @@
+.ConverterContainer {
+  width: 70%;
+  min-height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ConverterInput {
+  margin-top: 20px;
+  width: 200px;
+  font-size: calc(10px + 2.5vmin);
+  /* height: 50px; */
+}

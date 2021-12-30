@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Currencies } from "./types"
 import * as R from "ramda"
 import axios from 'axios'
+import "./Converter.css"
 
 export const Converter: React.FC<Currencies> = currencies => {
 
@@ -50,14 +51,15 @@ export const Converter: React.FC<Currencies> = currencies => {
   }, [inputVal])
 
   return (
-    <div>
-      <input type="text" value={inputVal} 
+    <div className="ConverterContainer">
+      <input className="ConverterInput" type="text" 
+        value={inputVal} placeholder="Example: 15 usd in jpy"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           setInputVal(e.target.value)
         }}
       />
       { shouldRenderRates
-        ? <div>
+        ? <div className="ConverterResult">
           { s[0] + " " +
             s[1] + " " +
             s[2] + " " +

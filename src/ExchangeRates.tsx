@@ -1,5 +1,4 @@
-import React, { useState, useEffect, ReactChild } from 'react'
-import { Rates, Currencies, Valute } from "./types"
+import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import "./ExchangeRates.css"
 import * as R from "ramda"
