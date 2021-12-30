@@ -37,7 +37,7 @@ export const Converter: React.FC<Currencies> = currencies => {
 
     if (typeof parseInt(s[0]) === "number") {
       if (R.any(x => x === s[1], keys)) {
-        if (s[2] === "in") {
+        if (s[2] === "in" || s[2] === "to") {
           if (R.any(x => x === s[3], keys)) {
             setShouldRenderRates(true)
           }
