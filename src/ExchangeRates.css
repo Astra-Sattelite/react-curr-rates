@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 1.5vmin);
+  margin-bottom: 40px;
 }
 
 .ExchangeRatesItem {
