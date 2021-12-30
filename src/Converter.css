@@ -9,7 +9,6 @@
 
 .ConverterInput {
   margin-top: 20px;
-  width: 200px;
-  font-size: calc(10px + 2.5vmin);
-  /* height: 50px; */
+  width: 250px;
+  font-size: calc(10px + 2vmin);
 }

@@ -64,7 +64,7 @@ export const Converter: React.FC<Currencies> = currencies => {
             s[1] + " " +
             s[2] + " " +
             s[3] + " " + 
-            "is: " + parseInt(s[0]) * R.last(R.last(Object.entries(rate)) || [])
+            "is: " + parseFloat(s[0]) * R.last(R.last(Object.entries(rate)) || [])
           }
           </div>
         : <></>
