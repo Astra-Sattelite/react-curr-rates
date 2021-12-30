@@ -5,16 +5,40 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 1vmin);
-  /* overflow: scroll; */
+  font-size: calc(10px + 1.5vmin);
 }
 
 .ExchangeRatesItem {
   width: 100%;
   height: 40px;
-  background-color: black;
   display: flex;
   flex-direction: row;
+}
+
+.ExchangeRatesItemCurr {
+  width: 30%;
+  height: 100%;
+  padding-left: 10px;
+  border-bottom: 1px solid black;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+}
+
+.ExchangeRatesItemValue {
+  width: 30%;
+  height: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.ExchangeRatesItemMock {
+  width: 40%;
+  height: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }

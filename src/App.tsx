@@ -73,7 +73,7 @@ const App: React.FC = () => {
     <div className="Main">
       <BrowserRouter>
         <Header />
-        <div>Current valute is: {valute}</div>
+        <div style={{marginTop: "20px"}}>Current valute is: {valute}</div>
         <SelectBasicValute currencies={currencies} valute={valute} setValute={setValute} />
         <Routes>
           <Route path="/" element={<Converter {...currencies} />} />

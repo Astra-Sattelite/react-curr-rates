@@ -41,7 +41,11 @@ export const ExchangeRates: React.FC<ExchangeRatesProps> = props => {
   return (
     <div className="ExchangeRatesContainer">
       { R.map(x =>
-        <div key={uid.v4()}>{R.head(x) + " = " + R.last(x)}</div>,
+        <div className="ExchangeRatesItem" key={uid.v4()}>
+          <div className="ExchangeRatesItemCurr">{R.head(x)}</div>
+          <div className="ExchangeRatesItemValue">{R.last(x)}</div>
+          <div className="ExchangeRatesItemMock">Some info probably</div>
+        </div>,
         tuplesFromArray
       )}
     </div>
