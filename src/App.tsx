@@ -42,7 +42,8 @@ const SelectBasicValute: React.FC<SelectBasicValuteProps> = props => {
             props.setValute(R.head(k) || "usd")
           }}
         >
-          {R.last(k) + " | " + R.head(k)}
+          <div className="BasicValuteName">{R.last(k)}</div>
+          <div className="BasicValuteAbr">{R.head(k)}</div>
         </div>
       )}
     </div>
