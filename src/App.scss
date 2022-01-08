@@ -8,10 +8,6 @@
   color: white;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
-}
-
 .BasicValuteContainer {
   width: 70%;
   height: 20vh;
@@ -50,6 +46,11 @@ button {
   box-sizing: border-box;
   border: 1px solid black;
   padding: 10px;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
 }
 
 .BasicValuteName {

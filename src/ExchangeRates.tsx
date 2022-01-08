@@ -8,8 +8,6 @@ type ExchangeRatesProps = {
   valute: string
 }
 
-
-
 const ExchangeRates: React.FC<ExchangeRatesProps> = props => {
 
   const [rates, setRates] = useState<Object>({})
@@ -30,7 +28,11 @@ const ExchangeRates: React.FC<ExchangeRatesProps> = props => {
   const arrayFromObj =
     Object.entries(rates)
       .filter(([_, v]) => typeof v !== "string")
-      .map(x => R.pair(R.keysIn(x[1]), R.valuesIn(x[1])))
+      .map(x => 
+        R.pair( R.keysIn(x[1])
+              , R.valuesIn(x[1])
+              )
+      )
 
   const tuplesFromArray = R.head(
     R.map(([x, y]) =>
