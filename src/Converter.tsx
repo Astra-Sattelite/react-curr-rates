@@ -4,7 +4,7 @@ import * as R from "ramda"
 import axios from 'axios'
 import "./Converter.css"
 
-export const Converter: React.FC<Currencies> = currencies => {
+const Converter: React.FC<Currencies> = currencies => {
 
   const [inputVal, setInputVal] = useState<string>("")
 
@@ -72,3 +72,5 @@ export const Converter: React.FC<Currencies> = currencies => {
     </div>
   )
 }
+
+export const MemoConverter = React.memo(Converter)

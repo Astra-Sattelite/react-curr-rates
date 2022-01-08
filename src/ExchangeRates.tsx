@@ -8,7 +8,9 @@ type ExchangeRatesProps = {
   valute: string
 }
 
-export const ExchangeRates: React.FC<ExchangeRatesProps> = props => {
+
+
+const ExchangeRates: React.FC<ExchangeRatesProps> = props => {
 
   const [rates, setRates] = useState<Object>({})
 
@@ -49,3 +51,5 @@ export const ExchangeRates: React.FC<ExchangeRatesProps> = props => {
     </div>
   )
 }
+
+export const MemoExchangeRates = React.memo(ExchangeRates)

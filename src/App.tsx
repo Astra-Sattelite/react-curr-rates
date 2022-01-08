@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.scss'
 import axios from "axios"
 import * as R from "ramda"
@@ -8,8 +8,8 @@ import {
   Route,
   Link
 } from "react-router-dom"
-import { ExchangeRates } from './ExchangeRates'
-import { Converter } from './Converter'
+import { MemoExchangeRates } from './ExchangeRates'
+import { MemoConverter } from './Converter'
 import { Currencies } from "./types"
 
 const Header: React.FC = () => {
@@ -50,6 +50,8 @@ const SelectBasicValute: React.FC<SelectBasicValuteProps> = props => {
   )
 }
 
+const MemoSelectBasicValute = React.memo(SelectBasicValute)
+
 const App: React.FC = () => {
 
   const [currencies, setCurrencies] = useState<Currencies>({mock: "mock"} as Currencies)
@@ -74,11 +76,11 @@ const App: React.FC = () => {
     <div className="Main">
       <BrowserRouter>
         <Header />
-        <div style={{marginTop: "20px"}}>Current valute is: {valute}</div>
-        <SelectBasicValute currencies={currencies} valute={valute} setValute={setValute} />
+        <div className="CurrValute">Current valute is: {valute}</div>
+        <MemoSelectBasicValute currencies={currencies} valute={valute} setValute={setValute} />
         <Routes>
-          <Route path="/" element={<Converter {...currencies} />} />
-          <Route path="/rates" element={<ExchangeRates valute={valute} />} />
+          <Route path="/" element={<MemoConverter {...currencies} />} />
+          <Route path="/rates" element={<MemoExchangeRates valute={valute} />} />
         </Routes>
       </BrowserRouter>
     </div>
