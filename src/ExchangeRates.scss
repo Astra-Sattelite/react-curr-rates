@@ -4,16 +4,22 @@
   border: 1px solid black;
   margin-top: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   font-size: calc(10px + 1.5vmin);
   margin-bottom: 40px;
 }
 
 .ExchangeRatesItem {
-  width: 100%;
+  width: 50%;
   height: 40px;
   display: flex;
   flex-direction: row;
+
+  &:nth-child(even) {
+    width: calc(50% - 1px);
+    border-left: 1px solid black;
+  }
 }
 
 .ExchangeRatesItemCurr {

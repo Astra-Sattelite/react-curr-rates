@@ -56,6 +56,7 @@ const App: React.FC = () => {
 
   const [valute, setValute] = useState<string>("usd")
 
+
   useEffect(() => {
     const getCurrencies = async () => {
       await axios.get("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.json")

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios"
-import "./ExchangeRates.css"
+import "./ExchangeRates.scss"
 import * as R from "ramda"
 import * as uid from "uuid"
 
